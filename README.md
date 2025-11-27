@@ -292,11 +292,3 @@ R_peak = (75.5°C - 26.85°C) / 250W = 0.195 K/W
 **Typical high-performance CPU water blocks:** 0.10-0.20 K/W (case to coolant)
 
 **Assessment:** Simulated thermal resistance of 0.185-0.195 K/W falls within the expected range for a quality water block with thermal paste interface (2.5E-4 m²·K/W contact resistance). Results are consistent with real-world performance of premium liquid cooling solutions.
-
-### Convergence Verification
-
-- Final residuals: Energy < 0.01, Continuity < 0.1
-- Temperature change: < 0.01°C over final 50 iterations
-- Mass flow conserved: Inlet = Outlet (within machine precision)
-
----
