@@ -99,3 +99,82 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 ![Fluid Volume Mesh](Fluid_Volume.png)
 *Complete fluid domain mesh showing inlet/outlet regions*
 
+---
+
+## Physics Setup
+
+### Solver Configuration
+- **Solver Type:** Segregated Flow/Energy
+- **Analysis Type:** Steady-state
+- **Turbulence Model:** K-Omega SST
+- **Heat Transfer:** Conjugate Heat Transfer (CHT) with solid-fluid coupling
+
+### Material Properties
+
+#### Solid Regions
+
+**Cold Plate (Copper)**
+- Density: 8,940 kg/m³
+- Specific Heat: 386 J/kg·K
+- Thermal Conductivity: 398 W/m·K
+
+**CPU Block (Silicon)**
+- Density: 2,329 kg/m³
+- Specific Heat: 702 J/kg·K
+- Thermal Conductivity: 124 W/m·K
+
+#### Fluid Region
+
+**Coolant (Liquid Water)**
+- Temperature-dependent properties
+- Reference temperature: 26.85°C
+
+### Porous Media Configuration
+
+The fin array is modeled as a porous medium with anisotropic properties to represent the directional nature of heat transfer and flow resistance through the microchannels.
+
+#### Porous Medium Properties
+
+| Property | XX Direction | YY Direction | ZZ Direction |
+|----------|--------------|--------------|--------------|
+| **Viscous Resistance** (kg/m³·s) | 100,000 | 100,000 | 1.0×10⁸ |
+| **Inertial Resistance** (kg/m⁴) | 1.5 | 1.5 | 100 |
+| **Thermal Conductivity** (W/m·K) | 217 | 217 | 1.0 |
+
+**Porosity:** 0.5 (50% open volume for flow)
+
+**Directional Behavior:**
+- **XX, YY (Flow directions):** Low resistance, high effective thermal conductivity (copper-dominated parallel conduction)
+- **ZZ (Blocked by fins):** High resistance, low thermal conductivity (water-limited serial conduction)
+
+#### Derivation of Porous Parameters
+
+**Porosity Calculation:**
+```
+ε = (fin spacing) / (fin spacing + fin thickness)
+ε = 0.314 mm / (0.314 mm + 0.371 mm) = 0.458 → rounded to 0.5
+```
+
+**Viscous Resistance (Flow Directions):**
+Based on Darcy flow through parallel plate channels:
+```
+1/α ≈ 12μ/h² 
+where h = hydraulic diameter (fin spacing)
+```
+
+**Thermal Conductivity (Orthotropic):**
+- **Flow directions (XX, YY):** Volume-weighted arithmetic mean (parallel conduction through copper fins)
+  - k_eff = ε·k_water + (1-ε)·k_copper ≈ 217 W/m·K
+- **Cross-flow direction (ZZ):** Harmonic mean (serial resistance through water gaps)
+  - k_eff ≈ 1.0 W/m·K (water-limited)
+
+### Thermal Interface Resistance
+
+**CPU/Cold Plate Contact:**
+- Interface resistance: 2.5×10⁻⁴ m²·K/W
+- Represents high-quality thermal paste (e.g., Arctic MX-4, Noctua NT-H1)
+- Applied at IHS/cold plate interface
+
+---
+
+## [Next Section: Boundary Conditions]
