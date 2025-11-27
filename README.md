@@ -99,12 +99,3 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 ![Fluid Volume Mesh](Fluid_Volume.png)
 *Complete fluid domain mesh showing inlet/outlet regions*
 
-**Details:**
-- Refined at inlet for jet impingement
-- Prism layers at all fluid-solid interfaces
-- Transition from fine (near walls) to coarse (core flow)
-
-### Mesh Quality Metrics
-- **Minimum cell quality:** [your value]
-- **Maximum skewness:** [your value]
-- **Aspect ratio (max):** [your value]
