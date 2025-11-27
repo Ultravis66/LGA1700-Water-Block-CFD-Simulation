@@ -86,11 +86,6 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 ![Cold Plate Mesh](Mesh_Plate.png)
 *Cold plate copper base mesh showing prism layers*
 
-**Details:**
-- Prism boundary layers for accurate wall heat transfer
-- Refined near impingement jet region
-- Captures thermal spreading in copper base
-
 #### Porous Medium (Fin Array)
 ![Porous Medium Mesh](Porous_Medium.png)
 *Porous zone mesh representing microchannel fin array*
