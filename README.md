@@ -52,8 +52,7 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 - **CPU Block (IHS representation):** 45mm × 38mm × 4mm (LGA1700 standard)
 - **Fin Spacing:** 0.314 mm
 - **Fin Thickness:** 0.371 mm
-- **Calculated Porosity:** 0.458 (45.8% open volume)
-- **Contact Area:** ~1900 mm²
+- **Calculated Porosity:** 0.458 (0.5 used for this simulation)
 
 **Geometry available:** [`CFD_Geo_STP.stp`](geometry/CFD_Geo_STP.stp)
 
