@@ -80,7 +80,6 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 **Details:**
 - Uniform refinement throughout solid volume
 - Fine resolution at IHS/cold plate interface for CHT coupling
-- Cell size: [your value] mm
 
 #### Cold Plate Base
 ![Cold Plate Mesh](Mesh_Plate.png)
