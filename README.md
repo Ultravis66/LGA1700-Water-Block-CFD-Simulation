@@ -177,4 +177,33 @@ where h = hydraulic diameter (fin spacing)
 
 ---
 
-## [Next Section: Boundary Conditions]
+---
+
+## Boundary Conditions
+
+### Inlet
+- **Type:** Mass flow inlet
+- **Mass flow rate:** 0.01 kg/s (10 g/s)
+- **Temperature:** 26.85°C (300 K)
+- **Turbulence:** 1% intensity, 1 mm length scale
+
+### Outlet
+- **Type:** Pressure outlet
+- **Gauge pressure:** 0 Pa (atmospheric reference)
+- **Backflow temperature:** 26.85°C
+
+### CPU Heat Source
+- **Type:** Volumetric heat generation
+- **Power:** 250 W
+- **Distribution:** Uniform across CPU block volume
+- **Represents:** Intel Core i9-12900K at max turbo (PL2)
+
+### Walls
+- **External surfaces:** Adiabatic (no heat loss to ambient)
+- **Internal interfaces:** Coupled (conjugate heat transfer)
+
+### Operating Conditions
+- **Reference pressure:** 101,325 Pa
+- **Gravity:** Disabled (forced convection dominated)
+
+---
