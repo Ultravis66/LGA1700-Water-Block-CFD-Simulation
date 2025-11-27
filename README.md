@@ -57,6 +57,59 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 
 **Geometry available:** [`CFD_Geo_STP.stp`](geometry/CFD_Geo_STP.stp)
 
----
+### Mesh Overview
+![Mesh Overview - Cut Plane](Mesh.png)
+*Overall mesh structure with cut plane showing internal regions (outer shell transparent)*
 
-## [Next Section: Meshing Strategy]
+### Mesh
+- **CPU (IHS):** 54,368 cells
+- **Cold Plate:** 1,698,419 cells
+- **Fluid Inlet:** 1,003,017 cells
+- **Porous Medium:** 4,335,825 cells
+- **Fluid Outlet:** 642,756 cells
+- **Total cell count:** 7,734,385 cells
+- **Prism layers:** 5 layers on all solid walls
+- **y+ target:** < 5 for accurate wall heat transfer
+
+### Region-Specific Meshing
+
+#### CPU Block (IHS)
+![CPU Mesh](Mesh_CPU.png)
+*Refined mesh on CPU block to capture thermal gradients*
+
+**Details:**
+- Uniform refinement throughout solid volume
+- Fine resolution at IHS/cold plate interface for CHT coupling
+- Cell size: [your value] mm
+
+#### Cold Plate Base
+![Cold Plate Mesh](Mesh_Plate.png)
+*Cold plate copper base mesh showing prism layers*
+
+**Details:**
+- Prism boundary layers for accurate wall heat transfer
+- Refined near impingement jet region
+- Captures thermal spreading in copper base
+
+#### Porous Medium (Fin Array)
+![Porous Medium Mesh](Porous_Medium.png)
+*Porous zone mesh representing microchannel fin array*
+
+**Details:**
+- Coarser mesh appropriate for volume-averaged porous model
+- 3-5 cells across porous region thickness
+- No boundary layer mesh within porous zone (not needed for volume-averaged approach)
+
+#### Fluid Domain
+![Fluid Volume Mesh](Fluid_Volume.png)
+*Complete fluid domain mesh showing inlet/outlet regions*
+
+**Details:**
+- Refined at inlet for jet impingement
+- Prism layers at all fluid-solid interfaces
+- Transition from fine (near walls) to coarse (core flow)
+
+### Mesh Quality Metrics
+- **Minimum cell quality:** [your value]
+- **Maximum skewness:** [your value]
+- **Aspect ratio (max):** [your value]
