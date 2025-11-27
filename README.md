@@ -8,7 +8,7 @@ Conjugate heat transfer CFD analysis of LGA1700 CPU water block with jet impinge
 
 ## Overview
 
-Advanced CFD analysis demonstrating conjugate heat transfer modeling of a high-performance CPU liquid cooling block for LGA1700 socket. Features jet impingement cooling, porous media representation of microchannel fin arrays, and orthotropic thermal conductivity for directional heat transfer.
+CFD analysis demonstrating conjugate heat transfer modeling of a high-performance CPU liquid cooling block for LGA1700 socket. Features jet impingement cooling, porous media representation of microchannel fin arrays, and orthotropic thermal conductivity for directional heat transfer.
 
 **Key Capabilities Demonstrated:**
 - Conjugate heat transfer (CHT) between solid copper and liquid coolant
