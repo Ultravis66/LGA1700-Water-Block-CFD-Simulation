@@ -82,16 +82,11 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 
 #### Cold Plate Base
 ![Cold Plate Mesh](Mesh_Plate.png)
-*Cold plate copper base mesh showing prism layers*
+*Cold plate copper base mesh*
 
 #### Porous Medium (Fin Array)
 ![Porous Medium Mesh](Porous_Medium.png)
 *Porous zone mesh representing microchannel fin array*
-
-**Details:**
-- Coarser mesh appropriate for volume-averaged porous model
-- 3-5 cells across porous region thickness
-- No boundary layer mesh within porous zone (not needed for volume-averaged approach)
 
 #### Fluid Domain
 ![Fluid Volume Mesh](Fluid_Volume.png)
