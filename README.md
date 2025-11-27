@@ -23,10 +23,10 @@ Advanced CFD analysis demonstrating conjugate heat transfer modeling of a high-p
 ### Starting Point
 The analysis began with a detailed CAD model of the EK-CPU Lignum water block from GrabCAD. The original geometry included full mechanical detail with mounting hardware, aesthetic features, and complex internal fin structures.
 
-![Original Geometry - View 1](images/Geometry_1.png)
+![Original Geometry - View 1](Geometry_1.png)
 *Original imported geometry showing full mechanical assembly*
 
-![Original Geometry - View 2](images/Geometry_2.png)
+![Original Geometry - View 2](Geometry_2.png)
 *Internal fin array structure from CAD model*
 
 ### CFD Simplification
@@ -45,7 +45,7 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 - CPU contact surface area and geometry
 - Thermal mass distribution of copper cold plate
 
-![CFD-Ready Geometry](images/CFD_Ready_Geo.png)
+![CFD-Ready Geometry](CFD_Ready_Geo.png)
 *Final CFD-ready geometry with fluid domain and simplified features*
 
 ### Key Dimensions
