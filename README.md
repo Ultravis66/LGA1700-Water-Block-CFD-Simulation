@@ -256,4 +256,3 @@ where h = hydraulic diameter (fin spacing)
 | **Heat Input** | 250 W |
 | **Heat Removed** | ~249 W |
 | **Energy Balance** | 99.6% |
-| **Thermal Resistance** | 0.192 K/W (junction to fluid) |
