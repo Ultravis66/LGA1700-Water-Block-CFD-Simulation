@@ -221,7 +221,7 @@ where h = hydraulic diameter (fin spacing)
 - Hottest fluid regions at fin array exit (approaching outlet)
 
 #### Flow Path and Heating
-![Streamlines Colored by Temperature](Streamlines_Temperature.png)
+![Streamlines Colored by Temperature](Steamlines_Temperature.png)
 *Flow streamlines from inlet to outlet colored by temperature*
 
 **Flow Characteristics:**
