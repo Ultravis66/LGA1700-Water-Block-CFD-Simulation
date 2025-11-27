@@ -211,12 +211,6 @@ where h = hydraulic diameter (fin spacing)
 ![Temperature Contour - Full Range](Temp_1.png)
 *Temperature distribution through centerplane (26.8°C to 74.9°C)*
 
-**Key Observations:**
-- **Peak CPU temperature:** 74.9°C (IHS surface, corner regions)
-- **Coolest region:** 26.8°C (inlet jet impingement zone)
-- **Temperature gradient:** ~48°C across IHS surface
-- **Jet impingement effect:** Clear cool spot at center where fresh coolant impacts IHS
-
 #### Fluid Temperature Detail
 ![Temperature Contour - Fluid Focus](Temp_2.png)
 *Temperature distribution capped at 40.1°C to highlight fluid heating*
@@ -225,7 +219,6 @@ where h = hydraulic diameter (fin spacing)
 - Coolant enters at 26.85°C
 - Progressive heating as flow moves radially outward from impingement zone
 - Hottest fluid regions at fin array exit (approaching outlet)
-- Clear visualization of thermal boundary layer development
 
 #### Flow Path and Heating
 ![Streamlines Colored by Temperature](Streamlines_Temperature.png)
@@ -249,8 +242,6 @@ where h = hydraulic diameter (fin spacing)
 | **Heat Input** | 250 W |
 | **Heat Removed** | ~249 W |
 | **Energy Balance** | 99.6% |
-
----
 
 ---
 
