@@ -67,8 +67,6 @@ The geometry was simplified for CFD analysis while preserving critical thermal-h
 - **Porous Medium:** 4,335,825 cells
 - **Fluid Outlet:** 642,756 cells
 - **Total cell count:** 7,734,385 cells
-- **Prism layers:** 5 layers on all solid walls
-- **y+ target:** < 5 for accurate wall heat transfer
 
 ### Region-Specific Meshing
 
